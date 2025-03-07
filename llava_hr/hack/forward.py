@@ -13,7 +13,6 @@ from .utils import *
 
 logger = logging.get_logger("transformers")
 
-MAX_NUM_VISON_TOKENS = 1024
 
 
 def hacked_llama_decoder_layer_forward(self):

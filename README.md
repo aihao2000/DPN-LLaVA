@@ -53,7 +53,7 @@ $DPN$ was tested on **Two popular MLLMs** across **10 benchmark datasets**.
 | Model              | FLOPs Ratio Reduction | Accuracy |
 | ------------------ | --------------------- | -------- |
 | DPN-LLaVA-1.5-7B   | 56%                   | +0.7%    |
-| DPN-LLaVA-HR-7B    | 41%                   | -0.4%    |
+| DPN-LLaVA-HR-7B    | 40%                   | -0.4%    |
 | DPN-LLaVA-HR-X-13B | 44%                   | +0.6%    |
 
 For more details, check the full report.
@@ -129,9 +129,8 @@ We recommend to directly pre-trained projector, here are the link from official 
 | LLaVA-HR-7b    | CLIP-L & ConvNeXt-L   | MLP-2x     | LCS-558K      | 1e                   | [projector](https://huggingface.co/favor123/llava-hr-7b-pretrain-384) |
 | LLaVA-HR-X-13b | CLIP-L & ConvNeXt-XXL | MLP-2x     | LCS-558K      | 1e                   | [projector](https://huggingface.co/favor123/llava-hr-13b-x-sft-1024) |
 
-```
+```shell
 huggingface-cli download --local-dir ./checkpoints/vicuna-7b-v1.5 lmsys/vicuna-7b-v1.5 
-huggingface-cli download --local-dir ./checkpoints/vicuna-7b-v1.5 lmsys/vicuna-7b-v1.5
 # for dpn-llava
 huggingface-cli download --local-dir ./checkpoints/llava-v1.5-7b llava-v1.5-7b mm_projector.bin 
 # for dpn-llava-hr
@@ -145,7 +144,7 @@ huggingface-cli download --local-dir ./checkpoints/llava-hr-13b-x-pretrain-384 f
 
 For the 13B model, you may need to modify the parameters used by the hack_llava function in the llava_hr/train/train.py file.
 
-```bash
+```shell
 bash scripts/v1_5/train_dpn_llava.sh
 bash scripts/v1_5/train_dpn_llava_hr.sh
 bash scripts/v1_5/train_dpn_llava_hr_x.sh

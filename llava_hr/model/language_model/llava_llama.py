@@ -51,7 +51,6 @@ class LlavaLlamaModel(LlavaMetaModel, LlamaModel):
         super(LlavaLlamaModel, self).__init__(config)
 
 
-MAX_NUM_VISON_TOKENS = 1024
 
 
 class LlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
