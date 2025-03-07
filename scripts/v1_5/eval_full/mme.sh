@@ -1,9 +1,7 @@
 #!/bin/bash
 MODEL_PATH=$1
-MODEL_BASE=$2
-python -m llava.eval.model_vqa_loader \
+python -m llava_hr.eval.model_vqa_loader_mme \
     --model-path $MODEL_PATH \
-    --model-base $MODEL_BASE \
     --question-file ./playground/data/eval/MME/llava_mme.jsonl \
     --image-folder ./playground/data/eval/MME/MME_Benchmark_release_version \
     --answers-file ./playground/data/eval/MME/answers/llava-v1.5-7b.jsonl \

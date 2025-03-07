@@ -2,7 +2,7 @@ import os
 import argparse
 import json
 
-from llava.eval.m4c_evaluator import EvalAIAnswerProcessor
+from llava_hr.eval.m4c_evaluator import EvalAIAnswerProcessor
 
 
 def parse_args():

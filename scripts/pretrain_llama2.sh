@@ -2,19 +2,19 @@
 
 # Uncomment and set the following variables correspondingly to run this script:
 
-MODEL_VERSION=vicuna-v0-13b
-# MODEL_VERSION=llama-2-7b-chat
+#MODEL_VERSION=vicuna-v0-13b
+MODEL_VERSION=llama-2-7b-chat
 
 ########### DO NOT CHANGE ###########
 ########### USE THIS FOR BOTH ###########
-PROMPT_VERSION=v0
+PROMPT_VERSION=plain
 ########### DO NOT CHANGE ###########
 
 deepspeed llava/train/train_mem.py \
-    --deepspeed ./scripts/zero3.json \
-    --model_name_or_path /data/vicuna/13B \
+    --deepspeed ./scripts/zero2.json \
+    --model_name_or_path /mnt/store/Llama-2-7b-chat-hf \
     --version $PROMPT_VERSION \
-    --data_path ../data/cc3m_generated_sentences_v3.json \
+    --data_path ../data/chat.json \
     --image_folder ../data/images/gcc \
     --vision_tower openai/clip-vit-large-patch14 \
     --tune_mm_mlp_adapter True \
@@ -41,16 +41,15 @@ deepspeed llava/train/train_mem.py \
     --gradient_checkpointing True \
     --dataloader_num_workers 4 \
     --lazy_preprocess True \
-    --report_to wandb \
-    --is_robust True
+    --report_to wandb
 
 
 deepspeed llava/train/train_mem.py \
-    --deepspeed ./scripts/zero3.json \
-    --model_name_or_path /data/vicuna/13B \
+    --deepspeed ./scripts/zero2.json \
+    --model_name_or_path /mnt/store/Llama-2-7b-chat-hf \
     --version $PROMPT_VERSION \
     --data_path ../data/llava_instruct_150k.json \
-    --image_folder ../data/images/train2017 \
+    --image_folder ../data/coco/images/train2014 \
     --vision_tower openai/clip-vit-large-patch14 \
     --pretrain_mm_mlp_adapter ./checkpoints/llava-$MODEL_VERSION-pretrain/mm_projector.bin \
     --mm_vision_select_layer -2 \
@@ -79,10 +78,10 @@ deepspeed llava/train/train_mem.py \
     --report_to wandb
 
 python model_vqa.py \
-    --model-path ./checkpoints/llava-$MODEL_VERSION-finetune \
+    --model-path ./checkpoints/llava-$MODEL_VERSION-pretrain \
     --question-file playground/data/coco2014_val_qa_eval/qa90_questions.jsonl \
     --image-folder \
-    ../data/images/val2014 \
+    ../data/coco/images/val2014 \
     --answers-file \
     ./answer-file-our.jsonl
 
