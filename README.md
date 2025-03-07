@@ -64,10 +64,10 @@ For more details, check the full report.
 
 Our DPN Approach can dynamically compress visual tokens according to the complexity of visual tasks in MLLM to accelerate reasoning, and significantly outperforms existing acceleration methods in fine-grained visual perception tasks.
 
-![Routing Results 3](README.assets/fig3.png)
+![Routing Results 3](README.assets/fig3.jpg)
 
 
-![Visualization Results](README.assets/fig4.png)
+![Visualization Results](README.assets/fig4.jpg)
 
 
 
