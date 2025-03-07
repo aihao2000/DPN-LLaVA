@@ -41,5 +41,4 @@ deepspeed llava_hr/train/train_mem.py \
     --use_special_token \
     --pooling_location 'post' \
     --pooling_type 'adaptive' \
-    --router_version 'v1' \
-    2>&1 | tee $output_dir/train.log
+    --router_version 'v1' 
