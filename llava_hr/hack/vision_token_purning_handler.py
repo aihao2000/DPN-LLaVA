@@ -21,18 +21,18 @@ def hack_llava(
     pooling_layers=[
         {
             "index": 7,
-            "kernel_size": [(1, 1), (2, 2), (4, 4)],
-            "stride": [(1, 1), (2, 2), (4, 4)],
+            "kernel_size": [(1, 1), (1, 2), (2, 2)],
+            "stride": [(1, 1), (1, 2), (2, 2)],
         },
         {
             "index": 15,
-            "kernel_size": [(1, 1), (2, 2), (4, 4)],
-            "stride": [(1, 1), (2, 2), (4, 4)],
+            "kernel_size": [(1, 1), (1, 2), (2, 2)],
+            "stride": [(1, 1), (1, 2), (2, 2)],
         },
         {
             "index": 23,
-            "kernel_size": [(1, 1), (2, 2)],
-            "stride": [(1, 1), (2, 2)],
+            "kernel_size": [(1, 1), (1, 2), (2, 2)],
+            "stride": [(1, 1), (1, 2), (2, 2)],
         },
     ],
     pooling_function="max",

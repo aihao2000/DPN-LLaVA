@@ -7,11 +7,7 @@ logger = logging.get_logger("transformers")
 
 
 def calculate_hinge_loss(pooling_layers, router_states, device, dtype):
-    # hinge pooling loss
-    # strides = [
-    #     math.ceil(float((single_stride[0] * single_stride[1]) // 2))
-    #     for single_stride in pooling_layers[0]["stride"]
-    # ]
+
     pooling_layer_indices = [single_layer["index"] for single_layer in pooling_layers]
     pooling_route_loss = [[]] * len(pooling_layers)
     scales = torch.tensor([0, 1, 2], dtype=dtype, device=device)

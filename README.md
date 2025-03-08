@@ -129,6 +129,7 @@ We recommend to directly pre-trained projector, here are the link from official 
 | LLaVA-HR-7b    | CLIP-L & ConvNeXt-L   | MLP-2x     | LCS-558K      | 1e                   | [projector](https://huggingface.co/favor123/llava-hr-7b-pretrain-384) |
 | LLaVA-HR-X-13b | CLIP-L & ConvNeXt-XXL | MLP-2x     | LCS-558K      | 1e                   | [projector](https://huggingface.co/favor123/llava-hr-13b-x-sft-1024) |
 
+
 ```shell
 huggingface-cli download --local-dir ./checkpoints/vicuna-7b-v1.5 lmsys/vicuna-7b-v1.5 
 # for dpn-llava
