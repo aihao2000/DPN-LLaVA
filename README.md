@@ -44,7 +44,7 @@ DPN formulates MLLM as a hierarchical structure where visual features are gradua
 - **Dynamic Pooling Experts**: Choose the optimal compression ratio based on the complexity of the image and visual questions to ensure performance and efficiency.
 - **Routing Loss**: Improve the acceleration effect without affecting training cost and performance.
 
-![fig2_00](README.assets/fig2.png)
+![fig2_00](README.assets/fig2.jpg)
 
 ## 📊 Efficiency Gains
 
