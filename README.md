@@ -2,8 +2,8 @@
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)]()
 [![Project](https://img.shields.io/badge/🚀-Project-green)]()
-[![Arxiv](https://img.shields.io/badge/📃-Arxiv-red)]()
-[![Open In Spaces](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue)]()
+[![Arxiv](https://img.shields.io/badge/📃-Arxiv-red)]([https://huggingface.co/collections/AisingioroHao0/dpn-llava](https://arxiv.org/abs/2503.20322))
+[![Models](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue)](https://huggingface.co/collections/AisingioroHao0/dpn-llava)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](link_to_license)
 
 ## 📣 News
@@ -161,7 +161,7 @@ Then, your can run our evaluation script `bash scripts/v1_5/eval.sh`.
 
 ## 📧 Contact
 
-For questions, please reach out to [anonymous](anonymous@outlook.com).
+For questions, please reach out to [aihao](aihao2000@outlook.com).
 
 ---
 
