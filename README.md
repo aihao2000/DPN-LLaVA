@@ -2,8 +2,8 @@
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)]()
 [![Project](https://img.shields.io/badge/🚀-Project-green)]()
-[![Arxiv](https://img.shields.io/badge/📃-Arxiv-red)]([https://huggingface.co/collections/AisingioroHao0/dpn-llava](https://arxiv.org/abs/2503.20322))
-[![Models](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue)](https://huggingface.co/collections/AisingioroHao0/dpn-llava)
+[![Arxiv](https://img.shields.io/badge/📃-Arxiv-red)](https://arxiv.org/abs/2503.20322)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)]([https://huggingface.co/InstantX/CSGO](https://huggingface.co/collections/AisingioroHao0/dpn-llava))
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](link_to_license)
 
 ## 📣 News
