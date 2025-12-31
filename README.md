@@ -90,7 +90,7 @@ This visualization demonstrates how $DPN$ effectively reduces computational over
 1. Clone the repository and navigate to the $DPN$ folder:
 
 ```bash
-git clone https://github.com/anonymous/DPN-LLaVA.git
+git clone git@github.com:aihao2000/DPN-LLaVA.git
 cd DPN-LLaVA
 ```
 
@@ -161,7 +161,7 @@ Then, your can run our evaluation script `bash scripts/v1_5/eval.sh`.
 
 ## 📧 Contact
 
-For questions, please reach out to [aihao](aihao2000@outlook.com).
+For questions, please reach out to aihao2000@outlook.com.
 
 ---
 
