@@ -161,11 +161,16 @@ def _run_inference(image: Image.Image, prompt: str, history: list, args) -> str:
     thread.start()
 
     generated = ""
-    for token_text in streamer:
-        generated += token_text
-        if generated.endswith(stop_str):
-            generated = generated[: -len(stop_str)].rstrip()
-            break
+    try:
+        for token_text in streamer:
+            generated += token_text
+            if generated.endswith(stop_str):
+                generated = generated[: -len(stop_str)].rstrip()
+                break
+    except TimeoutError:
+        # Streamer timed out waiting for the next token; return what was
+        # generated so far rather than crashing the demo.
+        pass
 
     thread.join()
     return generated.strip()
@@ -335,9 +340,9 @@ def parse_args():
 
 if __name__ == "__main__":
     _args = parse_args()
-    print("Loading model …")
+    print("Loading model ...")
     _load_model(_args)
-    print("Model loaded. Launching Gradio demo …")
+    print("Model loaded. Launching Gradio demo ...")
     demo = build_demo()
     demo.queue().launch(
         server_name=_args.host,
